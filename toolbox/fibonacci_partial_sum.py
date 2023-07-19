@@ -12,8 +12,8 @@ def fibonacci_partial_sum_naive(from_, to):
             sum += current
 
         current, next = next, current + next
-
     return sum % 10
+
 def pisano_period(m):
     previous=0
     current=1
@@ -30,7 +30,6 @@ def fibonacci_sum_last_digit_fast(n):
 
     for _ in range(n - 1):
         previous, current = current, (1+previous + current)%10
-
     return current
 
 if __name__ == '__main__':
