@@ -11,8 +11,8 @@ def fibonacci_sum_squares_naive(n):
     for _ in range(n - 1):
         previous, current = current, previous + current
         sum += current * current
-
     return sum % 10
+
 def get_fibonacci_mod_m(n,m):
     if n <= 1:
         return n
@@ -22,10 +22,11 @@ def get_fibonacci_mod_m(n,m):
 
     for _ in range(n - 1):
         previous, current = current, (previous + current)%m
-
     return current
+
 def get_fibonacci_huge_fast(n,m):
     return get_fibonacci_mod_m(n%(pisano_period(m)),m)
+
 def pisano_period(m):
     previous=0
     current=1
