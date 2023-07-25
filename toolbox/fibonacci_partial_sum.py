@@ -1,9 +1,7 @@
-
 import sys
 
 def fibonacci_partial_sum_naive(from_, to):
     sum = 0
-
     current = 0
     next  = 1
 
