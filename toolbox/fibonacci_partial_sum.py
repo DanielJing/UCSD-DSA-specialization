@@ -19,6 +19,7 @@ def pisano_period(m):
         previous, current = current, (previous + current)%m
         if previous==0 and current==1:
             return (i+1)
+
 def fibonacci_sum_last_digit_fast(n):
     if n <= 1:
         return n
