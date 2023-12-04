@@ -1,13 +1,15 @@
-import numpy as np
-
-def fibonacci(n):
-    if n == 0:
-        return 0
-    arr = np.zeros((n+1), dtype = int)
-    arr[1] = 1
+def fibonacci_number(n):
+    if n <= 1:
+        return n
+    
+    f = [0] * (n+1)
+    f[0], f[1] = 0, 1
+    
     for i in range(2, n+1):
-        arr[i] = arr[i-1]+arr[i-2]
-    return arr[n]
+        f[i] = f[i-2] + f[i-1]
+    return f[i]
 
-n = int(input())
-print(fibonacci(n))
+
+if __name__ == '__main__':
+    input_n = int(input())
+    print(fibonacci_number(input_n))
